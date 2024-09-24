@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4682D6E12CA3566C00B9C465 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4682D6E02CA3566C00B9C465 /* URLs.swift */; };
+		4682D6E72CA3594400B9C465 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 4682D6E62CA3594400B9C465 /* Networking */; };
 		46B074262CA23C740032B019 /* CVS_FlickrTestAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B074252CA23C740032B019 /* CVS_FlickrTestAppApp.swift */; };
 		46B0742A2CA23C760032B019 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46B074292CA23C760032B019 /* Assets.xcassets */; };
 		46B0742E2CA23C760032B019 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46B0742D2CA23C760032B019 /* Preview Assets.xcassets */; };
@@ -21,7 +23,6 @@
 		46B074662CA240910032B019 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B074652CA240910032B019 /* Post.swift */; };
 		46B074682CA2433D0032B019 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B074672CA2433D0032B019 /* PostListViewModel.swift */; };
 		46B0746A2CA2466F0032B019 /* PostDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B074692CA2466F0032B019 /* PostDetailsView.swift */; };
-		46B074842CA24E170032B019 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 46B074832CA24E170032B019 /* Networking */; };
 		46B0748A2CA250B20032B019 /* FlickrWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B074892CA250B20032B019 /* FlickrWebService.swift */; };
 		46B0748C2CA250F30032B019 /* Configuration+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0748B2CA250F30032B019 /* Configuration+Extension.swift */; };
 		46B074912CA278F40032B019 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B074902CA278F40032B019 /* View+Extension.swift */; };
@@ -51,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4682D6E02CA3566C00B9C465 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		4682D6E52CA3585C00B9C465 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Networking; path = ../Networking; sourceTree = "<group>"; };
 		46B074222CA23C740032B019 /* CVS_FlickrTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CVS_FlickrTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46B074252CA23C740032B019 /* CVS_FlickrTestAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVS_FlickrTestAppApp.swift; sourceTree = "<group>"; };
 		46B074292CA23C760032B019 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46B074842CA24E170032B019 /* Networking in Frameworks */,
+				4682D6E72CA3594400B9C465 /* Networking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +112,7 @@
 		46B074192CA23C740032B019 = {
 			isa = PBXGroup;
 			children = (
+				4682D6E52CA3585C00B9C465 /* Networking */,
 				46B074242CA23C740032B019 /* CVS_FlickrTestApp */,
 				46B074362CA23C760032B019 /* CVS_FlickrTestAppTests */,
 				46B074402CA23C760032B019 /* CVS_FlickrTestAppUITests */,
@@ -255,6 +259,7 @@
 				46B0748F2CA278E70032B019 /* Extensions */,
 				46B074A12CA299590032B019 /* DateFormatterManager.swift */,
 				46B074AC2CA341950032B019 /* Helper.swift */,
+				4682D6E02CA3566C00B9C465 /* URLs.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -276,7 +281,7 @@
 			);
 			name = CVS_FlickrTestApp;
 			packageProductDependencies = (
-				46B074832CA24E170032B019 /* Networking */,
+				4682D6E62CA3594400B9C465 /* Networking */,
 			);
 			productName = CVS_FlickrTestApp;
 			productReference = 46B074222CA23C740032B019 /* CVS_FlickrTestApp.app */;
@@ -412,6 +417,7 @@
 				46B074632CA2403E0032B019 /* PostListView.swift in Sources */,
 				46B074912CA278F40032B019 /* View+Extension.swift in Sources */,
 				46B074562CA23DC10032B019 /* Coordinator.swift in Sources */,
+				4682D6E12CA3566C00B9C465 /* URLs.swift in Sources */,
 				46B074662CA240910032B019 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -778,7 +784,7 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		46B074832CA24E170032B019 /* Networking */ = {
+		4682D6E62CA3594400B9C465 /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Networking;
 		};
