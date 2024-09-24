@@ -25,8 +25,6 @@ final class PostListViewModel: ObservableObject {
     
     func getPosts(with query: String) -> AnyPublisher<[Post], NetworkingError> {
         return flickrService.fetchPosts(with: query)
-            .flatMap(loadImages)
-            .eraseToAnyPublisher()
     }
     
     func updateSearch() {
@@ -62,31 +60,4 @@ final class PostListViewModel: ObservableObject {
         isLoading = true
         posts.removeAll()
     }
-    
-    private func loadImages(for posts: [Post]) -> AnyPublisher<[Post], NetworkingError> {
-        return posts
-            .publisher
-            .flatMap { post in
-                self.loadImagePublisher(post)
-                    .mapError { _ in NetworkingError.badResponse }
-            }
-            .collect()
-            .eraseToAnyPublisher()
-    }
-
-    private func loadImagePublisher(_ post: Post) -> AnyPublisher<Post, URLError> {
-        guard let url = URL(string: post.imageUrl) else {
-            return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
-        }
-        
-        return URLSession.shared.dataTaskPublisher(for: url)
-            .map { $0.data }
-            .map { data -> Post in
-                var updatedPost = post
-                updatedPost.imageData = data
-                return updatedPost
-            }
-            .eraseToAnyPublisher()
-    }
-    
 }

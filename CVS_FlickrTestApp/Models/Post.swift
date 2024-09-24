@@ -17,7 +17,6 @@ struct Post: Hashable, Identifiable {
     let author: String
     let publishDate: String
     let imageUrl: String
-    var imageData: Data?
     
     init(title: String, description: String, author: String, publishDate: String, imageUrl: String) {
         self.title = title

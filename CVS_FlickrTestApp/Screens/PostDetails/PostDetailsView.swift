@@ -72,15 +72,18 @@ private struct PostImageView: View {
     var post: Post
     
     var body: some View {
-        if let imgData = post.imageData, let uiImage = UIImage(data: imgData) {
-            Image(uiImage: uiImage)
-                .resizable()
-                .scaledToFill()
-            
-        } else {
-            Image("placeholder")
-                .resizable()
-                .scaledToFill()
+        AsyncImage(url: .init(string: post.imageUrl)) { image in
+            if let image = image.image {
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .clipped()
+            } else {
+                Image("placeholder")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .clipped()
+            }
         }
     }
 }
