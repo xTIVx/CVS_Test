@@ -15,8 +15,8 @@ struct PostItem: View {
         ZStack {
             Color.white
             PostImageView(post: post)
-                .frame(height: 120)
         }
+        .frame(height: 100)
         .clipShape(RoundedRectangle(cornerRadius: 12))
         .overlay(
             RoundedRectangle(cornerRadius: 12)
@@ -34,12 +34,12 @@ private struct PostImageView: View {
         if let imgData = post.imageData, let uiImage = UIImage(data: imgData) {
             Image(uiImage: uiImage)
                 .resizable()
-                .scaledToFit()
+                .aspectRatio(contentMode: .fill)
                 .clipped()
         } else {
             Image("placeholder")
                 .resizable()
-                .scaledToFit()
+                .aspectRatio(contentMode: .fill)
                 .clipped()
         }
     }
