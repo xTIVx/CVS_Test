@@ -30,7 +30,8 @@ The project is organized as follows:
 
 ## Screenshots: 
 ## 1. Landing Screen
-<img width="416" alt="List" src="https://github.com/user-attachments/assets/60c5e0ac-b621-4a78-acbc-108976a67181">
+<img width="416" alt="post" src="https://github.com/user-attachments/assets/fad9450e-5df7-46d8-bd51-5f25471dce29">
+
 
 
 ## 2. Details Screen
