@@ -31,9 +31,9 @@ struct PostListView: View {
         }
         .navigationTitle("Posts")
         .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
-        .onChange(of: viewModel.searchText) { oldValue, newValue in
+        .onChange(of: viewModel.searchText, perform: { value in
             viewModel.updateSearch()
-        }
+        })
     }
 }
 
