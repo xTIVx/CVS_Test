@@ -33,12 +33,9 @@ final class PostListViewModel: ObservableObject {
         searchCancellable = $searchText
             .debounce(for: .seconds(1), scheduler: RunLoop.main)
             .removeDuplicates()
-            .map { [weak self] in
-                self?.startLoading()
-                return $0
-            }
             .flatMap { [weak self] newSearchText -> AnyPublisher<[Post], NetworkingError> in
                 guard let self = self else { return Just([]).setFailureType(to: NetworkingError.self).eraseToAnyPublisher() }
+                self.startLoading()
                 if newSearchText.isEmpty {
                     return self.getPosts(with: "porcupine").compactMap({ $0 }).eraseToAnyPublisher()
                 } else {
