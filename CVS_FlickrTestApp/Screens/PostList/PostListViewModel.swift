@@ -24,6 +24,7 @@ final class PostListViewModel: ObservableObject {
     }
     
     func getPosts(with query: String) -> AnyPublisher<[Post], NetworkingError> {
+        startLoading()
         return flickrService.fetchPosts(with: query)
     }
     
@@ -35,7 +36,6 @@ final class PostListViewModel: ObservableObject {
             .removeDuplicates()
             .flatMap { [weak self] newSearchText -> AnyPublisher<[Post], NetworkingError> in
                 guard let self = self else { return Just([]).setFailureType(to: NetworkingError.self).eraseToAnyPublisher() }
-                self.startLoading()
                 if newSearchText.isEmpty {
                     return self.getPosts(with: "porcupine").compactMap({ $0 }).eraseToAnyPublisher()
                 } else {
