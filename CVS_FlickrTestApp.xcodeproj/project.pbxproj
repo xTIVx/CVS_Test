@@ -3,12 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4682D6E12CA3566C00B9C465 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4682D6E02CA3566C00B9C465 /* URLs.swift */; };
-		4682D6E72CA3594400B9C465 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 4682D6E62CA3594400B9C465 /* Networking */; };
+		4682D6EA2CA35A2A00B9C465 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4682D6E82CA35A2A00B9C465 /* NetworkingError.swift */; };
+		4682D6ED2CA35A3900B9C465 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4682D6EC2CA35A3900B9C465 /* BaseURL.swift */; };
+		4682D6EF2CA35A3E00B9C465 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4682D6EE2CA35A3E00B9C465 /* Configuration.swift */; };
+		4682D6F12CA35A4200B9C465 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4682D6F02CA35A4200B9C465 /* Networking.swift */; };
+		4682D6F32CA35A4900B9C465 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4682D6F22CA35A4900B9C465 /* NetworkManager.swift */; };
+		4682D6F52CA35A4E00B9C465 /* QueryParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4682D6F42CA35A4E00B9C465 /* QueryParameter.swift */; };
+		4682D6F72CA35A5100B9C465 /* URLQueryItemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4682D6F62CA35A5100B9C465 /* URLQueryItemBuilder.swift */; };
 		46B074262CA23C740032B019 /* CVS_FlickrTestAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B074252CA23C740032B019 /* CVS_FlickrTestAppApp.swift */; };
 		46B0742A2CA23C760032B019 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46B074292CA23C760032B019 /* Assets.xcassets */; };
 		46B0742E2CA23C760032B019 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46B0742D2CA23C760032B019 /* Preview Assets.xcassets */; };
@@ -53,7 +59,13 @@
 
 /* Begin PBXFileReference section */
 		4682D6E02CA3566C00B9C465 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
-		4682D6E52CA3585C00B9C465 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Networking; path = ../Networking; sourceTree = "<group>"; };
+		4682D6E82CA35A2A00B9C465 /* NetworkingError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		4682D6EC2CA35A3900B9C465 /* BaseURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
+		4682D6EE2CA35A3E00B9C465 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		4682D6F02CA35A4200B9C465 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		4682D6F22CA35A4900B9C465 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		4682D6F42CA35A4E00B9C465 /* QueryParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryParameter.swift; sourceTree = "<group>"; };
+		4682D6F62CA35A5100B9C465 /* URLQueryItemBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLQueryItemBuilder.swift; sourceTree = "<group>"; };
 		46B074222CA23C740032B019 /* CVS_FlickrTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CVS_FlickrTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46B074252CA23C740032B019 /* CVS_FlickrTestAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVS_FlickrTestAppApp.swift; sourceTree = "<group>"; };
 		46B074292CA23C760032B019 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,7 +100,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4682D6E72CA3594400B9C465 /* Networking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,10 +120,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4682D6E92CA35A2A00B9C465 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				4682D6E82CA35A2A00B9C465 /* NetworkingError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		4682D6EB2CA35A3200B9C465 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4682D6EC2CA35A3900B9C465 /* BaseURL.swift */,
+				4682D6EE2CA35A3E00B9C465 /* Configuration.swift */,
+				4682D6F02CA35A4200B9C465 /* Networking.swift */,
+				4682D6F22CA35A4900B9C465 /* NetworkManager.swift */,
+				4682D6F42CA35A4E00B9C465 /* QueryParameter.swift */,
+				4682D6F62CA35A5100B9C465 /* URLQueryItemBuilder.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		46B074192CA23C740032B019 = {
 			isa = PBXGroup;
 			children = (
-				4682D6E52CA3585C00B9C465 /* Networking */,
 				46B074242CA23C740032B019 /* CVS_FlickrTestApp */,
 				46B074362CA23C760032B019 /* CVS_FlickrTestAppTests */,
 				46B074402CA23C760032B019 /* CVS_FlickrTestAppUITests */,
@@ -229,6 +260,8 @@
 		46B074882CA250880032B019 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				4682D6EB2CA35A3200B9C465 /* Core */,
+				4682D6E92CA35A2A00B9C465 /* Errors */,
 				46B074892CA250B20032B019 /* FlickrWebService.swift */,
 				46B0748B2CA250F30032B019 /* Configuration+Extension.swift */,
 			);
@@ -281,7 +314,6 @@
 			);
 			name = CVS_FlickrTestApp;
 			packageProductDependencies = (
-				4682D6E62CA3594400B9C465 /* Networking */,
 			);
 			productName = CVS_FlickrTestApp;
 			productReference = 46B074222CA23C740032B019 /* CVS_FlickrTestApp.app */;
@@ -356,7 +388,6 @@
 			);
 			mainGroup = 46B074192CA23C740032B019;
 			packageReferences = (
-				46B074822CA24E170032B019 /* XCLocalSwiftPackageReference "../Networking" */,
 			);
 			productRefGroup = 46B074232CA23C740032B019 /* Products */;
 			projectDirPath = "";
@@ -402,20 +433,27 @@
 			files = (
 				46B074942CA279F30032B019 /* PostItem.swift in Sources */,
 				46B0745A2CA23DF90032B019 /* Sheet.swift in Sources */,
+				4682D6ED2CA35A3900B9C465 /* BaseURL.swift in Sources */,
 				46B074682CA2433D0032B019 /* PostListViewModel.swift in Sources */,
 				46B0745E2CA23E790032B019 /* CoordinatorView.swift in Sources */,
 				46B0745C2CA23E020032B019 /* FullScreenCover.swift in Sources */,
 				46B074AD2CA341950032B019 /* Helper.swift in Sources */,
+				4682D6F12CA35A4200B9C465 /* Networking.swift in Sources */,
 				46B074A02CA2981A0032B019 /* Date+Extension.swift in Sources */,
+				4682D6F72CA35A5100B9C465 /* URLQueryItemBuilder.swift in Sources */,
 				46B074262CA23C740032B019 /* CVS_FlickrTestAppApp.swift in Sources */,
 				46B0748A2CA250B20032B019 /* FlickrWebService.swift in Sources */,
+				4682D6EF2CA35A3E00B9C465 /* Configuration.swift in Sources */,
+				4682D6F32CA35A4900B9C465 /* NetworkManager.swift in Sources */,
 				46B074AB2CA338150032B019 /* String+Extension.swift in Sources */,
 				46B0746A2CA2466F0032B019 /* PostDetailsView.swift in Sources */,
 				46B074582CA23DF40032B019 /* Page.swift in Sources */,
 				46B074A22CA299590032B019 /* DateFormatterManager.swift in Sources */,
 				46B0748C2CA250F30032B019 /* Configuration+Extension.swift in Sources */,
+				4682D6EA2CA35A2A00B9C465 /* NetworkingError.swift in Sources */,
 				46B074632CA2403E0032B019 /* PostListView.swift in Sources */,
 				46B074912CA278F40032B019 /* View+Extension.swift in Sources */,
+				4682D6F52CA35A4E00B9C465 /* QueryParameter.swift in Sources */,
 				46B074562CA23DC10032B019 /* Coordinator.swift in Sources */,
 				4682D6E12CA3566C00B9C465 /* URLs.swift in Sources */,
 				46B074662CA240910032B019 /* Post.swift in Sources */,
@@ -775,20 +813,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCLocalSwiftPackageReference section */
-		46B074822CA24E170032B019 /* XCLocalSwiftPackageReference "../Networking" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../Networking;
-		};
-/* End XCLocalSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		4682D6E62CA3594400B9C465 /* Networking */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Networking;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 46B0741A2CA23C740032B019 /* Project object */;
 }

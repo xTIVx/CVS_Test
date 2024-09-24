@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Networking
 
 extension Configuration {
     struct Flickr {
