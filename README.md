@@ -11,7 +11,6 @@ FlickerApp is an iOS application built using **SwiftUI** and follows the **MVVMC
 - View details of individual images.
 - Built using **SwiftUI** with **MVVMC** architecture for separation of concerns.
 - Unit and UI testing implemented.
-- Networking package implemented.
 
 ---
 
