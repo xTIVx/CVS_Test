@@ -37,6 +37,11 @@ The project is organized as follows:
 ## 2. Details Screen
 <img width="424" alt="details" src="https://github.com/user-attachments/assets/ecfd614d-2e58-4a58-b685-29fcb023ff2e">
 
+## Demo / Recording
+
+
+https://github.com/user-attachments/assets/b08c9849-5b95-4329-b82a-82c69b2e507a
+
 
 
 ## Installation
